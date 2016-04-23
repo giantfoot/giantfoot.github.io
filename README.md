@@ -1,0 +1,2 @@
+# giantfoot.github.io
+blog
