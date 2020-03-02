@@ -1,6 +1,7 @@
 # MYSQL核心技术总结
 
 
+
 > Mysql **更新流程**
 
 - 更新过程主要涉及到 **redo log(重做日志)** 和 **bin log(归档日志)** 两个主角，其中redo log是InnoD引擎专有的日志，而bin log属于Server层，是所有引擎公用的。
