@@ -2,13 +2,11 @@
 *好记性不如烂笔头，勤学强记，温故知新*
 
 
-
-
 > **数据库核心技术总结**
-- [*Mysql 内部结构以及查询流程*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql1.md)
-- [*Mysql 更新流程详解*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql2.md)
-- [*Mysql 事务*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql3.md)
-- [*Mysql 索引概述*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql4.md)
+> - [*Mysql 内部结构以及查询流程*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql1.md)
+> - [*Mysql 更新流程详解*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql2.md)
+> - [*Mysql 事务*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql3.md)
+> - [*Mysql 索引概述*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql4.md)
 
 > **算法练习总结**
 - [*动态规划*]()
