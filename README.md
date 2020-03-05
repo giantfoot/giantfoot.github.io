@@ -9,7 +9,7 @@
 > - [*Mysql 索引概述*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql4.md)
 
 > **算法练习总结**
-- [*动态规划*]()
+> - [*动态规划*]()
 
 
 
@@ -32,3 +32,5 @@
 ### Python 学习总计
 
 ### Git 使用笔记整理
+
+### 杂记
