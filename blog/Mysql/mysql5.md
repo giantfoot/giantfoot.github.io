@@ -37,3 +37,6 @@ mysql> select * from tuser where name like '张%' and age=10 and ismale=1;
   - 2.select * from T where k between 1 and 5
 
   > 第一个要树搜素5次  第二个搜索一次，第二个较好
+
+    - like 'j' 或 'j%' 可以使用索引，并且快速定位记录。
+    - like '%j' 或 '%j%'，只是在二级索引树上遍历查找记录，并不能快速定位（扫描了整棵索引树），使用了索引但不能加快速度。
