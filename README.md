@@ -1,4 +1,4 @@
-# 学习笔记整理
+# 学习笔记整理-献给记性不好的自己
 *好记性不如烂笔头，勤学强记，温故知新*
 
 
@@ -12,7 +12,7 @@
 > - [*Mysql 行锁*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql7.md)
 
 > **算法练习总结**
-> - [*动态规划*]()
+> - [*动态规划*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/algorithm/dp.md)
 
 
 
