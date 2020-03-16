@@ -9,6 +9,7 @@
 > - [*Mysql 索引概述上*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql4.md)
 > - [*Mysql 索引概述下*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql5.md)
 > - [*Mysql 全局锁和表锁*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql6.md)
+> - [*Mysql 行锁*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql7.md)
 
 > **算法练习总结**
 > - [*动态规划*]()
@@ -32,6 +33,14 @@
 ### Hadoop 学习笔记
 
 ### Python 学习总计
+
+### Resis
+
+### MongoDB
+
+### Kafka
+
+### Rabbit
 
 ### Git 使用笔记整理
 
