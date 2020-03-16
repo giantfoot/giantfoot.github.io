@@ -8,6 +8,7 @@
 > - [*Mysql 事务*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql3.md)
 > - [*Mysql 索引概述上*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql4.md)
 > - [*Mysql 索引概述下*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql5.md)
+> - [*Mysql 全局锁和表锁*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql6.md)
 
 > **算法练习总结**
 > - [*动态规划*]()
