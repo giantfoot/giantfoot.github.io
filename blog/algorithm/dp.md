@@ -28,6 +28,8 @@
 
 **LeetCode**
 
+[崔添翼 背包九讲](https://blog.csdn.net/yandaoqiusheng/article/details/84782655)
+
 > 主要题目：
 ```
 第 5 题、
@@ -48,7 +50,7 @@
 第 221 题。
 ```
 
-494. **目标和**
+**494. 目标和**
 
 给定一个非负整数数组，a1, a2, ..., an, 和一个目标数，S。现在你有两个符号 + 和 -。对于数组中的任意一个整数，你都可以从 + 或 -中选择一个符号添加在前面。
 返回可以使最终数组和为目标数 S 的所有添加符号的方法数。
@@ -118,6 +120,48 @@ public class Solution {
             }
         }
         return (S > 1000 || S < -1000) ? 0 : dp[length-1][S+1000];
+    }
+}
+```
+
+
+**5.最长回文子串**
+
+给定一个字符串 s，找到 s 中最长的回文子串。你可以假设 s 的最大长度为 1000。
+
+示例 1：
+```
+输入: "babad"
+输出: "bab"
+注意: "aba" 也是一个有效答案。
+```
+
+解题思路1 ：
+>暴力破解不可取，对暴力破解进行优化-动态规划，处理过的方案存储在数组里，后面直接使用。
+数组boolean[i][j] sign记录起始坐标 i 和 结束坐标 j之间的子字符串是否为回文字符串，那么sign[i][j] = sign[i+1][j-1] && s.charAt(i) == s.charAt(j)，其中长度等于1和2的时候要特殊处理。
+
+实现代码1：
+```
+class Solution {
+    public String longestPalindrome(String s) {
+        int length = s.length();
+        boolean[][] sign = new boolean[length][length];
+        int maxLength = 0;
+        String maxStr = "";
+        for (int i=1; i<=length; i++) {
+          for (int start=0; start<length; start++) {
+            int end = start + i - 1;
+            if (end >= length) {
+              break;
+            }
+            sign[start][end] = (i==1 || i==2 || sign[start+1][end-1]) && s.charAt(start) == s.charAt(end);
+            if (sign[start][end] && i > maxLength) {
+              maxLength = i;
+              maxStr = s.substring(start, end+1);
+            }
+          }
+        }
+        return maxStr;
     }
 }
 ```
