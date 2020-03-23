@@ -3,18 +3,20 @@
 
 
 > **数据库核心技术总结**
-> - [*Mysql 内部结构以及查询流程*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql1.md)
-> - [*Mysql 更新流程详解*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql2.md)
-> - [*Mysql 事务*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql3.md)
-> - [*Mysql 索引概述上*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql4.md)
-> - [*Mysql 索引概述下*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql5.md)
-> - [*Mysql 全局锁和表锁*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql6.md)
-> - [*Mysql 行锁*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql7.md)
-> - [*Mysql 事务隔离*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql8.md)
-> - [*Mysql 唯一索引和普通索引*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql9.md)
+
+- [*Mysql 内部结构以及查询流程*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql1.md)
+- [*Mysql 更新流程详解*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql2.md)
+- [*Mysql 事务*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql3.md)
+- [*Mysql 索引概述上*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql4.md)
+- [*Mysql 索引概述下*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql5.md)
+- [*Mysql 全局锁和表锁*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql6.md)
+- [*Mysql 行锁*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql7.md)
+- [*Mysql 事务隔离*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql8.md)
+- [*Mysql 唯一索引和普通索引*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql9.md)
 
 > **算法练习总结**
-> - [*动态规划*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/algorithm/dp.md)
+
+- [*动态规划*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/algorithm/dp.md)
 
 
 
