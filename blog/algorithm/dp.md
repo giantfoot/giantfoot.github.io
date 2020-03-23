@@ -28,6 +28,25 @@
 
 **LeetCode**
 
+> 主要题目：
+```
+第 5 题、
+第 53 题、
+第 300 题、
+第 72 题、
+第 1143 题、
+第 62 题、
+第 63 题、
+背包问题（第 416 题，第 494 题）、
+硬币问题（第 322 题、第 518 题）、
+打家劫舍问题（做头两题即可）、
+股票问题、
+第 96 题、
+第 139 题、
+第 10 题、
+第 91 题、
+第 221 题。
+```
 
 494. **目标和**
 
@@ -54,4 +73,51 @@
 保证返回的最终结果能被32位整数存下。
 ```
 解题思路：
->
+> 这道题给定了各种范围，明显很适合使用状态转移表法，但由于数组的和存在负数，所以要特殊处理，给sum加上1000的冗余值，得到20 X 2000的二维数组，然后初始化第一行数据，接着对数据里的每个可能的值进行赋值，最后得出结果。
+
+> 优化：不需要对二维数组的每个数据进行赋值，添加筛选条件，减少赋值操作。
+
+优化前实现代码：
+```
+public class Solution {
+    public int findTargetSumWays(int[] nums, int S) {
+        int length = nums.length;
+        int[][] dp = new int[length][2001];
+        for (int i=0; i<=2001; i++) {
+            if (nums[0] == i) {
+                dp[0][1000+i]++;
+                dp[0][1000-i]++;
+            }
+        }
+        for (int i=1; i<length; i++) {
+            for (int sum=0; sum <= 2000; sum++) {
+                dp[i][sum] = (sum-nums[i] >= 0 ? dp[i-1][sum-nums[i]] : 0) + (sum+nums[i] <= 2000 ? dp[i-1][sum+nums[i]] : 0);
+            }
+        }
+        return (S > 1000 || S < -1000) ? 0 : dp[length-1][S+1000];
+    }
+}
+```
+优化后的代码：
+```
+public class Solution {
+    public int findTargetSumWays(int[] nums, int S) {
+        int length = nums.length;
+        int[][] dp = new int[length][2001];
+        for (int i=0; i<=2001; i++) {
+            if (nums[0] == i) {
+                dp[0][1000+i]++;
+                dp[0][1000-i]++;
+            }
+        }
+        for (int i=1; i<length; i++) {
+            for (int sum=0; sum <= 2000; sum++) {
+                if ((sum-nums[i] > 0 && dp[i-1][sum-nums[i]] > 0) || (sum+nums[i] <= 2000 && dp[i-1][sum+nums[i]] > 0)) {
+                    dp[i][sum] = (sum-nums[i] >= 0 ? dp[i-1][sum-nums[i]] : 0) + (sum+nums[i] <= 2000 ? dp[i-1][sum+nums[i]] : 0);
+                }
+            }
+        }
+        return (S > 1000 || S < -1000) ? 0 : dp[length-1][S+1000];
+    }
+}
+```
