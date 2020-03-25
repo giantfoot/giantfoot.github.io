@@ -15,6 +15,7 @@
 - [*Mysql 唯一索引和普通索引*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql9.md)
 - [*MySQL为什么有时候会选错索引？*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql10.md)
 - [*MySQL字符串索引*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql11.md)
+- [*MySQL数据抖动*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql12.md)
 
 > **算法练习总结**
 
