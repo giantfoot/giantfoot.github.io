@@ -30,6 +30,8 @@
 
 [崔添翼 背包九讲](https://blog.csdn.net/yandaoqiusheng/article/details/84782655)
 
+[知乎优秀答案](https://www.zhihu.com/question/23995189/answer/1094101149)
+
 > 主要题目：
 ```
 第 5 题、
