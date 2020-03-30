@@ -17,6 +17,7 @@
 - [*MySQL字符串索引*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql11.md)
 - [*MySQL数据抖动*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql12.md)
 - [*MySQL为什么表数据删掉一半，表文件大小不变？*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql13.md)
+- [*MySQLcount原理和效率*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql14.md)
 
 > **算法练习总结**
 
