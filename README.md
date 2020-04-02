@@ -2,7 +2,7 @@
 *好记性不如烂笔头，勤学强记，温故知新*
 
 
-> **数据库核心技术总结**
+> **[数据库核心技术总结]**
 
 - [*Mysql 内部结构以及查询流程*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql1.md)
 - [*Mysql 更新流程详解*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql2.md)
@@ -22,9 +22,17 @@
 - [*MySQL 随机排序*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql16.md)
 - [*MySQL 索引选择的特殊情况*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql17.md)
 
-> **算法练习总结**
+> **[算法练习总结]**
 
-- [*动态规划*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/algorithm/dp.md)
+  ###### 动态规划
+- [*解题思路*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/algorithm/dp.md)
+- [*494.目标和*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/algorithm/dp2.md)
+- [*5.最长回文子串*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/algorithm/dp3.md)
+- [*53. 最大子序和*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/algorithm/dp4.md)
+- [*300. 最长上升子序列*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/algorithm/dp5.md)
+- [*72. 编辑距离*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/algorithm/dp6.md)
+- [*1143. 最长公共子序列*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/algorithm/dp7.md)
+- [*62. 不同路径*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/algorithm/dp8.md)
 
 
 
