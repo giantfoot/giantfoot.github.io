@@ -33,6 +33,8 @@
 - [*72. 编辑距离*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/algorithm/dp6.md)
 - [*1143. 最长公共子序列*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/algorithm/dp7.md)
 - [*62. 不同路径*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/algorithm/dp8.md)
+- [*63. 不同路径 II*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/algorithm/dp9.md)
+- [*416. 分割等和子集*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/algorithm/dp10.md)
 
 
 
