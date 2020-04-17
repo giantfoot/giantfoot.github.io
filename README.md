@@ -35,6 +35,10 @@
 - [*62. 不同路径*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/algorithm/dp8.md)
 - [*63. 不同路径 II*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/algorithm/dp9.md)
 - [*416. 分割等和子集*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/algorithm/dp10.md)
+- [*494. 分割等和子集*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/algorithm/dp11.md)
+- [*322. 零钱兑换*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/algorithm/dp12.md)
+- [*518. 零钱兑换 II*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/algorithm/dp13.md)
+- [*139. 单词拆分*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/algorithm/dp14.md)
 
 
 
