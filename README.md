@@ -24,6 +24,8 @@
 - [*MySQL 幻读*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql18.md)
 - [*MySQL join执行细节*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql19.md)
 - [*MySQL join优化*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql20.md)
+- [*MySQL 临时表*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql21.md)
+- [*MySQL 内部临时表*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql21.md)
 
 > **算法练习总结**
 
