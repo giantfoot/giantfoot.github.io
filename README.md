@@ -22,7 +22,8 @@
 - [*MySQL 随机排序*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql16.md)
 - [*MySQL 索引选择的特殊情况*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql17.md)
 - [*MySQL 幻读*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql18.md)
-- [*MySQL join*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql19.md)
+- [*MySQL join执行细节*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql19.md)
+- [*MySQL join优化*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql20.md)
 
 > **算法练习总结**
 
