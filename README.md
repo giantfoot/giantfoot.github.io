@@ -26,6 +26,7 @@
 - [*MySQL join优化*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql20.md)
 - [*MySQL 临时表*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql21.md)
 - [*MySQL 内部临时表*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql21.md)
+- [*MySQL 临时表应用*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql22.md)
 
 > **算法练习总结**
 
