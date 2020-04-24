@@ -28,7 +28,8 @@
 - [*MySQL 内部临时表*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql21.md)
 - [*MySQL 临时表应用*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql22.md)
 - [*MySQL InnoDB 引擎和Memory 引擎*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql23.md)
-- [*MySQL 自增主键*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql23.md)
+- [*MySQL 自增主键*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql24.md)
+- [*MySQL 易错知识点总结*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql25.md)
 
 
 > **算法练习总结**
@@ -52,7 +53,9 @@
 
 
 
-### Java 核心技术
+> **Java 核心技术**
+
+- [*Java 概述*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core1.md)
 
 ### 数据结构系统梳理
 
