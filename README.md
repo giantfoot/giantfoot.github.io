@@ -5,6 +5,7 @@
 > **Java 核心技术**
 
 - [*Java 概述*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core1.md)
+- [*Java 异常*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core2.md)
 
 
 > **数据库核心技术总结**
@@ -39,7 +40,8 @@
 
 > **算法练习总结**
 
-动态规划
+  ####动态规划
+
 - [*解题思路*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/algorithm/dp.md)
 - [*494.目标和*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/algorithm/dp2.md)
 - [*5.最长回文子串*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/algorithm/dp3.md)
