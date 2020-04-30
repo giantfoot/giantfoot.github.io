@@ -2,6 +2,11 @@
 *好记性不如烂笔头，勤学强记，温故知新*
 
 
+> **Java 核心技术**
+
+- [*Java 概述*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core1.md)
+
+
 > **数据库核心技术总结**
 
 - [*Mysql 内部结构以及查询流程*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql1.md)
@@ -52,10 +57,6 @@
 - [*10. 正则表达式匹配*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/algorithm/dp15.md)
 
 
-
-> **Java 核心技术**
-
-- [*Java 概述*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core1.md)
 
 ### 数据结构系统梳理
 
