@@ -40,7 +40,7 @@
 
 > **算法练习总结**
 
-  #### 动态规划
+##### 动态规划
 
 - [*解题思路*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/algorithm/dp.md)
 - [*494.目标和*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/algorithm/dp2.md)
