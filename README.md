@@ -6,7 +6,16 @@
 
 - [*Java 概述*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core1.md)
 - [*Java 异常*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core2.md)
-
+- [*final*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core3.md)
+- [*引用类型*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core4.md)
+- [*字符串*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core5.md)
+- [**](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core6.md)
+- [**](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core6.md)
+- [**](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core6.md)
+- [**](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core6.md)
+- [**](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core6.md)
+- [**](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core6.md)
+- [**](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core6.md)
 
 > **数据库核心技术总结**
 
@@ -89,3 +98,5 @@
 > **杂记**
 
 - [*深拷贝*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/other/deep_copy.md)
+
+- [*循环变量*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/other/loop_var.md)
