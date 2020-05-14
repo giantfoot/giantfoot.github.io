@@ -86,4 +86,6 @@
 
 ### Git 使用笔记整理
 
-### 杂记
+> **杂记**
+
+- [*深拷贝*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/other/deep_copy.md)
