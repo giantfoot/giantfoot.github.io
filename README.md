@@ -95,6 +95,10 @@
 
 ### Git 使用笔记整理
 
+### 设计模式
+
+### Elasticsearch
+
 > **杂记**
 
 - [*深度拷贝*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/other/deep_copy.md)
