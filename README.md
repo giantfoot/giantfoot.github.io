@@ -1,8 +1,8 @@
-# 学习笔记整理-留给记性不好的自己
-*好记性不如烂笔头，勤学强记，温故知新*
+# 勤学强记，温故知新
+*好记性不如烂笔头*
 
 
-> **Java 核心技术**
+> **Java 查漏补缺**
 
 - [*Java 概述*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core1.md)
 - [*Java 异常*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core2.md)
