@@ -49,6 +49,8 @@
 
 > **算法练习总结**
 
+- [*LEETCODE*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/algorithm/leetcode.md)
+
 ##### 动态规划
 
 - [*解题思路*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/algorithm/dp.md)
