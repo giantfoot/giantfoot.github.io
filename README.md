@@ -9,9 +9,9 @@
 - [*final*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core3.md)
 - [*引用类型*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core4.md)
 - [*字符串*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core5.md)
-- [**](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core6.md)
-- [**](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core6.md)
-- [**](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core6.md)
+- [*动态代理*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core6.md)
+- [*包装*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core7.md)
+- [*常用集合*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core8.md)
 - [**](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core6.md)
 - [**](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core6.md)
 - [**](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core6.md)
@@ -49,7 +49,7 @@
 
 > **算法练习总结**
 
-- [*LEETCODE*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/algorithm/leetcode.md)
+- [*LEETCODE 题型汇总*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/algorithm/leetcode.md)
 
 ##### 动态规划
 
