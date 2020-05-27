@@ -29,4 +29,4 @@
 - 位运算
 ![*位运算*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/pic/位运算.png)
 - 字符串
-![*字符串*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/pic/字符串.png)
+![*字符串*](../pic/字符串.png)
