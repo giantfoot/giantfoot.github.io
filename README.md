@@ -110,3 +110,4 @@
 - [*socket和长连接*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/other/socket.md)
 - [*各种字符集汇总*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/other/unicode.md)
 - [*同步异步和阻塞非阻塞详解*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/other/同步异步和阻塞非阻塞.md)
+- [*零拷贝*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/other/零拷贝.md)
