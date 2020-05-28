@@ -13,3 +13,13 @@ Hadoop主要分为四大块：
     其中，NodeManager，Container和ApplicationMaster出于一个节点上，出于同一层级。
 - **MapReduce**：负责运算，类似分治算法，Map分发任务，Reduce聚合结果。
 - **Common**：辅助工具
+
+**大数据生态体系**
+
+![大数据生态体系](../pic/hadoop/大数据生态体系.png)
+
+克隆节点的网络配置流程：
+
+![克隆节点](../pic/hadoop/克隆节点.png)
+![克隆修改ip](../pic/hadoop/克隆修改ip.png)
+![ip匹配](../pic/hadoop/ip匹配.png)
