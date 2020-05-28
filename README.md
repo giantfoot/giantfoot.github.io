@@ -83,7 +83,9 @@
 
 ### SpringCloud 使用总结
 
-### Hadoop 学习笔记
+> **Hadoop 学习笔记**
+
+- [*Hadoop基础概念*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/hadoop/hadoop1.md)
 
 ### Python 学习总计
 
@@ -111,3 +113,4 @@
 - [*各种字符集汇总*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/other/unicode.md)
 - [*同步异步和阻塞非阻塞详解*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/other/同步异步和阻塞非阻塞.md)
 - [*零拷贝*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/other/零拷贝.md)
+- [*重载和复写*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/other/Overload和Override的区别.md)
