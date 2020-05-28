@@ -28,7 +28,8 @@ public static void copyFileByChannel(File source, File dest) throws
                  ();){
         for (long count = sourceChannel.size() ;count>0 ;) {
             long transferred = sourceChannel.transferTo(
-                    sourceChannel.position(), count, targetChannel);            sourceChannel.position(sourceChannel.position() + transferred);
+                    sourceChannel.position(), count, targetChannel);            
+                    sourceChannel.position(sourceChannel.position() + transferred);
             count -= transferred;
         }
     }
