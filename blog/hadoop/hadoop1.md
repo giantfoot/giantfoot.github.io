@@ -2,7 +2,7 @@
 Hadoop主要分为四大块：
 - **HDFS**：数据存储，主要分为NameNode，DataNode和Secondary NameNode。
     1. **NameNode**：主要存储元数据，相当于目录，包括文件名，文件目录结构，文件属性（生成时间，副本数，文件权限），以及每个文件的块列表和块所在的DataNode等。
-    
+
     2. **DataNode**：存储块数据和校验数据。
     3. **Secondary NameNode**：监控HDFS状态的辅助后台程序，每隔一段时间获取HDFS元数据的快照。
 - **Yarn**：资源调度，主要分为RourceManager，NodeManager，Container，ApplicationMaster。
@@ -18,6 +18,8 @@ Hadoop主要分为四大块：
 **大数据生态体系**
 
 ![大数据生态体系](../pic/hadoop/大数据生态体系.png)
+
+### 节点搭建及复制
 
 克隆节点的网络配置流程：
 
