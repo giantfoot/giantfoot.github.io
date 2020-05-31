@@ -1,6 +1,6 @@
-### Hadoop学习笔记
+### Hadoop学习笔记二
 
-**网络配置**
+**网络配置二**
 
 vi   /etc/sysconfig/network-scripts/ifcfg-ens33
 
