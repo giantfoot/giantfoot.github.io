@@ -33,6 +33,9 @@ export PATH=$PATH:$HADOOP_HOME/sbin
 Hadoop官网
 https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html
 
+
+- 配置和启动HDFS
+
 左下角，core-default.xml -》默认配置信息
 
 hadoop解压目录 etc/hadoop/core-site.xml:
@@ -64,9 +67,9 @@ vim hadoop-env.sh
     </property>
 ```
 
-**启动Hadoop**
+**启动Hadoop（HDFS）**
 
-- 格式化NameNode(只在第一次启动的时候格式化，以后不需要)
+格式化NameNode(只在第一次启动的时候格式化，以后不需要)
 > 格式化之前先执行jps，把存在的进程全部关掉，然后把之前生成的目录删除，比如data和logs目录
 
 hadoop解压目录下
@@ -78,6 +81,8 @@ sbin/hadoop-daemon.sh start namenode
 启动datanode
 sbin/hadoop-daemon.sh start datanode
 ```
+
+访问 http://192.168.80.100:50070 （访问HDFS）
 
 **hadoop启动后，服务器上就存在了两个文件系统，一个是linux本地，一个是HDFS。本地文件系统命令不变，HDFS文件系统命令格式为：bin/hdfs dfs -后面跟linux命令，例如**
 
@@ -104,3 +109,67 @@ bin/hdfs dfs -put wcinput/wc.input /usr/test//input
 > 一定要先关掉NameNode和DataNode的进程后，删除相关目录再格式化
 
 ![格式化NameNode的问题](../pic/hadoop/格式化NameNode的问题.PNG)
+
+**启动Hadoop（YARN和MapReduce）**
+
+- 配置yarn-env.sh (etc/hadoop/yarn-env.sh)
+```
+export JAVA_HOME=/opt/module/jdk1.8.0_211
+```
+
+- 配置yarn-site.xml
+```
+  <!-- Reducer获取数据的方式 -->
+  <property>
+      <name>yarn.nodemanager.aux-services</name>
+      <value>mapreduce_shuffle</value>
+  </property>
+  <!-- 指定YARN的ResourceManager的地址 -->
+  <property>
+      <name>yarn.resourcemanager.hostname</name>
+      <value>hadoop100</value>
+  </property>
+```
+
+- 配置mapred-env.sh (etc/hadoop/yarn-env.sh)
+```
+export JAVA_HOME=/opt/module/jdk1.8.0_211
+```
+
+- mapred-site.xml.template重命名为mapred-site.xml并编辑
+```
+<!-- 指定MapReduce运行在YARN上 -->
+<property>
+    <name>mapreduce.framework.name</name>
+    <value>yarn</value>
+</property>
+```
+
+- 启动集群
+  1. 确定NameNode和DataNode已经启动
+
+  2. sbin/yarn-daemon.sh start resourcemanager
+  3. sbin/yarn-daemon.sh start nodemanager
+  4. 访问 http://hadoop100:8088 (访问MapReduce)，调用Wordcount测试用例，就可以在页面上看到计算过程
+
+**配置历史服务器**
+> 为了查看程序的历史运行情况，需要配置历史服务器
+
+1. 配置mapred-site.xml
+```
+<!-- 指定历史服务器端地址 -->
+<property>
+    <name>mapreduce.jobhistory.address</name>
+    <value>hadoop100:10020</value>
+</property>
+<!-- 指定历史服务器端地址 -->
+<property>
+    <name>mapreduce.jobhistory.webapp.address</name>
+    <value>hadoop100:19888</value>
+</property>
+```
+
+2. 启动历史服务器
+```
+sbin/mr-jobhistory-daemon.sh start historyserver
+```
