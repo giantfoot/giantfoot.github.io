@@ -30,7 +30,7 @@ export PATH=$PATH:$HADOOP_HOME/sbin
 
 **配置Hadoop**
 
-- Hadoop官网
+Hadoop官网
 https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html
 
 左下角，core-default.xml -》默认配置信息
@@ -90,3 +90,17 @@ bin/hdfs dfs -ls
 ```
 bin/hdfs dfs -put wcinput/wc.input /usr/test//input
 ```
+
+不要经常格式化namenode:
+
+/opt/module/hadoop-2.7.7/data/tmp/dfs/data/current/version是datanode的版本号。
+
+它和
+/opt/module/hadoop-2.7.7/data/tmp/dfs/name/current/version，即namenode的版本号是一样的。
+格式化NameNode，会产生新的集群id，即版本号，导致NameNode和DataNode的集群id不一致，集群找不到以往数据。
+
+所以，格式NameNode时，一定要先删除data数据和log日志，然后在格式化NameNode。
+
+> 一定要先关掉NameNode和DataNode的进程后，删除相关目录再格式化
+
+![格式化NameNode的问题](../pic/hadoop/格式化NameNode的问题.PNG)
