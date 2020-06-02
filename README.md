@@ -15,7 +15,17 @@
 - [*Map*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core9.md)
 - [*IO*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core10.md)
 - [*文件拷贝*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core11.md)
-- [**](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core6.md)
+- [*接口和抽象类*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core12.md)
+- [*设计模式*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core13.md)
+- [*synchronized和ReentrantLock*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core14.md)
+- [*synchronized底层简述*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core15.md)
+- [*一个线程两次调用start()方法*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core16.md)
+- [*死锁*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core17.md)
+- [*JUC*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core18.md)
+- [**](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core19.md)
+- [**](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core20.md)
+- [**](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core21.md)
+- [**](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core22.md)
 
 > **数据库核心技术总结**
 
@@ -86,7 +96,8 @@
 > **Hadoop 学习笔记**
 
 - [*Hadoop基础概念*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/hadoop/hadoop1.md)
-
+- [*Hadoop网络配置*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/hadoop/hadoop2.md)
+- [*Hadoop安装启动*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/hadoop/hadoop3.md)
 
 
 ### Python 学习总计
