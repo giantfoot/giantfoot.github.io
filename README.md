@@ -1,32 +1,6 @@
 # 勤学强记，温故知新
 *好记性不如烂笔头*
 
-
-> **Java 查漏补缺**
-
-- [*Java 概述*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core1.md)
-- [*Java 异常*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core2.md)
-- [*final*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core3.md)
-- [*引用类型*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core4.md)
-- [*字符串*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core5.md)
-- [*动态代理*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core6.md)
-- [*包装*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core7.md)
-- [*常用集合*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core8.md)
-- [*Map*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core9.md)
-- [*IO*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core10.md)
-- [*文件拷贝*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core11.md)
-- [*接口和抽象类*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core12.md)
-- [*设计模式*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core13.md)
-- [*synchronized和ReentrantLock*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core14.md)
-- [*synchronized底层简述*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core15.md)
-- [*一个线程两次调用start()方法*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core16.md)
-- [*死锁*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core17.md)
-- [*JUC*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core18.md)
-- [**](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core19.md)
-- [**](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core20.md)
-- [**](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core21.md)
-- [**](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core22.md)
-
 > **数据库核心技术总结**
 
 - [*Mysql 内部结构以及查询流程*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql1.md)
@@ -56,6 +30,32 @@
 - [*MySQL 自增主键*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql24.md)
 - [*MySQL 易错知识点总结*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/Mysql/mysql25.md)
 
+> **Java 查漏补缺**
+
+- [*Java 概述*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core1.md)
+- [*Java 异常*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core2.md)
+- [*final*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core3.md)
+- [*引用类型*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core4.md)
+- [*字符串*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core5.md)
+- [*动态代理*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core6.md)
+- [*包装*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core7.md)
+- [*常用集合*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core8.md)
+- [*Map*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core9.md)
+- [*IO*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core10.md)
+- [*文件拷贝*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core11.md)
+- [*接口和抽象类*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core12.md)
+- [*设计模式*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core13.md)
+- [*synchronized和ReentrantLock*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core14.md)
+- [*synchronized底层简述*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core15.md)
+- [*一个线程两次调用start()方法*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core16.md)
+- [*死锁*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core17.md)
+- [*JUC*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core18.md)
+- [**](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core19.md)
+- [**](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core20.md)
+- [**](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core21.md)
+- [**](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core22.md)
+
+
 
 > **算法练习总结**
 
@@ -83,7 +83,10 @@
 
 ### 数据结构系统梳理
 
-### 集合底层原理和源码解析
+> **集合底层原理和源码解析**
+
+- [*集合总览*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/collection/collection总览图.md)
+- [*集合总览*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/collection/ArrayList源码.md)
 
 ### JVM 相关知识梳理
 
