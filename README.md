@@ -50,7 +50,7 @@
 - [*一个线程两次调用start()方法*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core16.md)
 - [*死锁*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core17.md)
 - [*JUC*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core18.md)
-- [**](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core19.md)
+- [*Queue*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core19.md)
 - [**](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core20.md)
 - [**](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core21.md)
 - [**](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core22.md)
