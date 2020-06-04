@@ -86,7 +86,7 @@
 > **集合底层原理和源码解析**
 
 - [*集合总览*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/collection/collection总览图.md)
-- [*集合总览*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/collection/ArrayList源码.md)
+- [*ArrayList源码*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/collection/ArrayList源码.md)
 
 ### JVM 相关知识梳理
 

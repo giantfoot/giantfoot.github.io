@@ -1,5 +1,33 @@
 #### ArrayList 解析
 
+ArrayList实现了RandomAccess接口，先看下这个接口，**打开源码后，发现接口里面什么也没有，这是个空的接口，并且是1.4才引入的**，可以理解为，让调用方知道这个集合支持快速随机访问，以便加快调用方的运行速度。
+
+```
+* @since 1.4
+ */
+public interface RandomAccess {
+}
+```
+RandomAccess 是一个标志接口，表明实现这个这个接口的 List 集合是支持快速随机访问的。也就是说，实现了这个接口的集合是支持 快速随机访问 策略的。**官网还特意说明了，如果是实现了这个接口的 List，那么使用for循环的方式获取数据会优于用迭代器获取数据。**
+
+当要实现某些算法时，会判断当前类是否实现了RandomAccess接口，会选择不同的算法。
+
+比如在Collections二分查找时，
+```
+public static <T> int binarySearch(List<? extends Comparable<? super T>> list, T key) {
+    if (list instanceof RandomAccess || list.size()<BINARYSEARCH_THRESHOLD)
+        return Collections.indexedBinarySearch(list, key);
+    else
+        return Collections.iteratorBinarySearch(list, key);
+}
+```
+在进行二分查找时，首先判断list是否实现了RandomAccess，然后选择执行最优算法。
+如果集合类是RandomAccess的实现，则尽量用for(int i = 0; i < size; i++) 即for循环来遍历，而不是用Iterator
+迭代器来进行迭代。
+
+> List实现所使用的标记接口，用来表明实现了这些接口的list支持快速（通常是常数时间）随机访问。
+ 这个接口的主要目的是允许一般的算法更改它们的行为，以便在随机或者顺序存取列表时能提供更好的性能.
+
 
 - List接口是大小可变数组的实现，实现了所有可选列表操作，**并允许包括null在内的所有元素**。
 
