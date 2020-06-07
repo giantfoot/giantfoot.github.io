@@ -2,7 +2,6 @@
 
 批量同步脚本
 ```
-
 #!/usr/bin/expect
 
 set password 5091125901
@@ -20,6 +19,36 @@ for { set host 102 } { $host<105} {incr host} {
 }
 ```
 
+/usr/local/bin/xsync  或者 /usr/sbin/xsync
+```
+#!/bin/bash
+#1 获取输入参数个数，如果没有参数，直接退出
+pcount=$#
+if((pcount==0)); then
+echo no args;
+exit;
+fi
+
+#2 获取文件名称
+p1=$1
+fname=`basename $p1`
+echo fname=$fname
+
+#3 获取上级目录到绝对路径
+pdir=`cd -P $(dirname $p1); pwd`
+echo pdir=$pdir
+
+#4 获取当前用户名称
+user=`whoami`
+
+#5 循环
+for((host=101; host<103; host++)); do
+#echo $pdir/$fname $user@hadoop$host:$pdir
+echo --------------- hadoop$host ----------------
+rsync -rvl $pdir/$fname $user@hadoop$host:$pdir
+done
+```
+
 ![完全分布式集群搭建](../pic/hadoop/完全分布式集群搭建.PNG)
 
 - NameNode和SecondaryNameNode要避免放在一台服务器上
@@ -33,9 +62,9 @@ for { set host 102 } { $host<105} {incr host} {
         <value>hdfs://hadoop102:9000</value>
     </property>
 ```
-配置hadoop-env.sh
+配置hdfs-site.xml.sh
 ```
-<!-- 指定HDFS中的NameNode的地址 -->
+<!-- 指定HDFS中的secondaryNameNode的地址 -->
     <property>
         <name>dfs.namenode.secondary.http-address</name>
         <value>hadoop104:50090</value>
@@ -72,14 +101,16 @@ bin/hdfs namenode -format
 
 ```
 hadoop100：
-回到home目录
+回到home目录,用户目录下
 ls -al
 找到.ssh目录
 ssh-keygen -t rsa (连续三次回车)
-ssh-copy-id hadoop102 (拷贝公钥)
+ssh-copy-id hadoop102 (拷贝公钥，输入yes)
 hadoop102的.ssh目录就会多一个Authorized_keys文件
 现在就可以ssh hadoop102免密登录
 ssh-copy-id hadoop101 （目前的节点也要拷贝一份，不然自己访问自己也要输密码）
+windows配置linux无密登录
+https://blog.csdn.net/qq_40451749/article/details/89348799
 ```
 
 **存在NameNode和ResourceManager的机器都要配置ssh免密登录**
@@ -127,7 +158,7 @@ tar -zxvf tmp.text
 7. 各个模块分开启动停止（配置ssh是前提）常用
 ```
 整体启动停止HDFS
-start-dfs.sh   stop-dfs.sh
+sbin/start-dfs.sh   sbin/stop-dfs.sh
 整体启动停止YARN
-start-yarn.sh  stop-yarn.sh
+sbin/start-yarn.sh  sbin/stop-yarn.sh
 ```
