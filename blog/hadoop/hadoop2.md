@@ -59,6 +59,12 @@ DNS1=192.168.80.2
 
 ```
 
+克隆后如果hostname没变，可以使用
+
+hostnamectl set-hostname xx
+
+如果还不行，直接修改 /etc/hostname
+
 
 Nat网络概述
 ![Nat网络概述](../pic/hadoop/nat网络.png)
