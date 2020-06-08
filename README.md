@@ -39,8 +39,8 @@
 - [*JAVA Stack*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/collection/Stack.md)
 - [*JAVA fail-fast*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/collection/fail-fast.md)
 - [*JAVA Enumeration*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/collection/Enumeration.md)
-- [*JAVA hashmap 源码详解*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/collection/hashmap.md)
-- [**](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/collection/.md)
+- [*JAVA hashmap 图文详解*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/collection/hashmap.md)
+- [*JAVA hashtable*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/collection/hashtable.md)
 - [**](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/collection/.md)
 - [**](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/collection/.md)
 
