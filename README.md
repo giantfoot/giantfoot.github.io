@@ -108,9 +108,18 @@
 
 > **Hadoop 学习笔记**
 
-- [*Hadoop基础概念*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/hadoop/hadoop1.md)
-- [*Hadoop网络配置*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/hadoop/hadoop2.md)
-- [*Hadoop安装启动*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/hadoop/hadoop3.md)
+- [*Hadoop 基础概念*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/hadoop/hadoop1.md)
+- [*Hadoop 网络配置*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/hadoop/hadoop2.md)
+- [*Hadoop 安装启动*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/hadoop/hadoop3.md)
+- [*Hadoop 配置历史服务器*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/hadoop/hadoop4.md)
+- [*Hadoop 完全分布式*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/hadoop/hadoop5.md)
+- [*Hadoop 集群时间同步*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/hadoop/hadoop6.md)
+- [*Hadoop HDFS 概念详解*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/hadoop/hadoop7.md)
+- [*Hadoop HDFS 的 SHELL操作*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/hadoop/hadoop8.md)
+- [*Hadoop JAVA框架API实例*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/hadoop/hadoop9.md)
+- [*Hadoop *](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/hadoop/hadoop3.md)
+- [*Hadoop *](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/hadoop/hadoop3.md)
+- [*Hadoop *](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/hadoop/hadoop3.md)
 
 
 ### Python 学习总计
