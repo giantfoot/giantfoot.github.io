@@ -62,6 +62,16 @@ WeakHashMap正是由于使用的是弱引用，**因此它的对象可能被随�
 
 WeakHashMap内部有一个expungeStaleEntries函数，在这个函数内部实现移除其内部不用的entry从而达到的自动释放内存的目的。因此我们每次访问WeakHashMap的时候，都会调用这个expungeStaleEntries函数清理一遍。这也就是为什么前两次调用WeakHashMap的size()方法有可能不一样的原因。
 
+
+  (01) 新建WeakHashMap，将“键值对”添加到WeakHashMap中。
+          实际上，WeakHashMap是通过数组table保存Entry(键值对)；每一个Entry实际上是一个单向链表，即Entry是键值对链表。
+
+  (02) **当某“弱键”不再被其它对象引用**，并被GC回收时。在GC回收该“弱键”时，这个“弱键”也同时会被添加到ReferenceQueue(queue)队列中。
+
+  (03) **当下一次我们需要操作WeakHashMap时，会先同步table和queue**。table中保存了全部的键值对，而queue中保存被GC回收的键值对；**同步它们，就是删除table中被GC回收的键值对。**
+
+  这就是“弱键”如何被自动从WeakHashMap中删除的步骤了。
+
 **首先GC每次清理掉一个对象之后，引用对象会被放到ReferenceQueue中。然后遍历这个queue进行删除即可。**
 
 当然。WeakHashMap的增删改查操作都会直接或者间接的调用expungeStaleEntries()方法，达到及时清除过期entry的目的。
@@ -105,4 +115,8 @@ objectMap.put方法执行的时候i会被封装为Integer类型的，Integer保�
 > WeakHashMap的key是弱引用，ThreadLocal的key也是用的弱引用，但是WeakHashMap在被GC回收时value也会被回收了，而ThreadLocal则不会，ThreadLocal必须显示的调用一下remove方法才能将value的值给清空。
 在两个的源码中可以看到，ThreadLocal里面并没有一个接受对象被GC回收后通知的ReferenceQueue，所以就算key被回收了，value也是存在的，并不会和WeakHashMap一样，在key被清空后，可以使用ReferenceQueue这个队列接受被GC的通知，然后把value也自己给清空。
 
-在Thread类中保有ThreadLocal.ThreadLocalMap的引用，即在一个Java线程栈中指向了堆内存中的一个ThreadLocal.ThreadLocalMap的对象，此对象中保存了若干个Entry，每个Entry的key(ThreadLocal实例)是弱引用，value是强引用（这点类似于WeakHashMap）。用到弱引用的只是key，每个key都弱引用指向threadLocal，当把threadLocal实例置为null以后，没有任何强引用指向threadLocal实例，所以threadLocal将会被gc回收，但是value却不能被回收，因为其还存在于ThreadLocal.ThreadLocalMap的对象的Entry之中。只有当前Thread结束之后，所有与当前线程有关的资源才会被GC回收。所以，如果在线程池中使用ThreadLocal，由于线程会复用，而又没有显示的调用remove的话的确是会有可能发生内存泄露的问题
+在Thread类中保有ThreadLocal.ThreadLocalMap的引用，即在一个Java线程栈中指向了堆内存中的一个ThreadLocal.ThreadLocalMap的对象，此对象中保存了若干个Entry，每个Entry的key(ThreadLocal实例)是弱引用，value是强引用（这点类似于WeakHashMap）。
+
+用到弱引用的只是key，每个key都弱引用指向threadLocal，当把threadLocal实例置为null以后，没有任何强引用指向threadLocal实例，所以threadLocal将会被gc回收，但是value却不能被回收，因为其还存在于ThreadLocal.ThreadLocalMap的对象的Entry之中。
+
+只有当前Thread结束之后，所有与当前线程有关的资源才会被GC回收。所以，如果在线程池中使用ThreadLocal，由于线程会复用，而又没有显示的调用remove的话的确是会有可能发生内存泄露的问题

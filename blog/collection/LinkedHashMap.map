@@ -1,0 +1,147 @@
+#### LinkedHashMap
+
+LinkedHashMap继承了HashMap，是Map接口的哈希表和链接列表实现。哈希表的功能通过继承HashMap实现了。LinkedHashMap还维护着一个双重链接链表。此链表定义了迭代顺序，该迭代顺序可以是插入顺序或者是访问顺序。
+
+```
+public class LinkedHashMap<K,V>
+    extends HashMap<K,V>
+    implements Map<K,V>
+
+    static class Entry<K,V> extends HashMap.Node<K,V> {
+        Entry<K,V> before, after;
+        Entry(int hash, K key, V value, Node<K,V> next) {
+            super(hash, key, value, next);
+        }
+    }
+```
+
+**LinkedHashMap的数据结构是数组+链表+红黑树（since JDK1.8）+ 双重链接列表。**
+
+![LinkedHashMap](../pic/collection/LinkedHashMap.jpg)
+
+LinkedHashMap为每个Entry添加了前驱和后继（before, after），构成了一个双向循环链表，每次向linkedHashMap插入键值对，除了将其插入到哈希表的对应位置之外，还要将其插入到双向循环链表的尾部。
+
+**双重链接列表定义了迭代顺序，默认是插入顺序。值得注意的是，如果一个key被重插入，插入顺序不受影响。**
+
+```
+/**
+    * 双向循环链表的头结点
+    */
+   transient LinkedHashMap.Entry<K,V> head;
+
+   /**
+    * 双向循环链表的尾结点
+    */
+   transient LinkedHashMap.Entry<K,V> tail;
+
+   /**
+    * 迭代顺序。
+    * true代表按访问顺序迭代
+    * false代表按插入顺序迭代
+    *
+    * @serial
+    */
+   final boolean accessOrder;
+```
+
+
+HashMap的源码里有这么三个空方法：
+```
+void afterNodeAccess(Node<K,V> p) { }
+void afterNodeInsertion(boolean evict) { }
+void afterNodeRemoval(Node<K,V> p) { }
+```
+这三个方法方法体为空，为什么存在？
+
+> 这三个方法表示在访问、插入、删除某个节点之后，进行一些处理，它们在LinkedHashMap都有重写。LinkedHashMap正是通过重写这三个方法来保证链表的插入、删除的有序性。
+
+![LinkedHashMap](../pic/collection/LinkedHashMap2.jpg)
+
+上面的继承体系乍一看还是有点复杂的，同时也有点让人迷惑。
+
+HashMap 的内部类 TreeNode 不继承它的了一个内部类 Node，却继承自 Node 的子类 LinkedHashMap 内部类 Entry?
+
+LinkedHashMap 内部类 Entry 继承自 HashMap 内部类 Node，并新增了两个引用，分别是 before 和 after。这两个引用的用途不难理解，也就是用于维护双向链表。同时，TreeNode 继承 LinkedHashMap 的内部类 Entry 后，就具备了和其他 Entry 一起组成链表的能力。
+
+但是这里需要大家考虑一个问题。当我们使用 HashMap 时，TreeNode 并不需要具备组成链表能力。如果继承 LinkedHashMap 内部类 Entry ，TreeNode 就多了两个用不到的引用，这样做不是会浪费空间吗？
+
+简单说明一下这个问题（水平有限，不保证完全正确），这里这么做确实会浪费空间，但与 TreeNode 通过继承获取的组成链表的能力相比，这点浪费是值得的。在 HashMap 的设计思路注释中，有这样一段话：
+```
+Because TreeNodes are about twice the size of regular nodes, we
+use them only when bins contain enough nodes to warrant use
+(see TREEIFY_THRESHOLD). And when they become too small (due to
+removal or resizing) they are converted back to plain bins. In
+usages with well-distributed user hashCodes, tree bins are
+rarely used.
+```
+大致的意思是 **TreeNode 对象的大小约是普通 Node 对象的2倍**，我们仅在桶（bin）中包含足够多的节点时再使用。当桶中的节点数量变少时（取决于删除和扩容），TreeNode 会被转成 Node。当用户实现的 hashCode 方法具有良好分布性时，**树类型的桶将会很少被使用**。
+
+通过上面的注释，我们可以了解到。一般情况下，只要 hashCode 的实现不糟糕，Node 组成的链表很少会被转成由 TreeNode 组成的红黑树。也就是说 TreeNode 使用的并不多，浪费那点空间是可接受的。当然最重要的还是下面的原因：
+
+**在分析HashMap源码时，发现static final class TreeNode<K,V> extends LinkedHashMap.Entry<K,V>，为什么不直接继承Node，而且在相关方法中也没有用到Entry的before与after指针？**
+
+这当然与LinkedHashMap有关，**若是TreeNode直接继承自Node，那么对于LinkedHashMap#Entry就要继承自TreeNode**，那么对于LinkedHashMap来说它的每个节点都将含有left，right，parent，prev 四个指针，这是没必要的，浪费空间。所以采用 TreeNode 继承LinkedHashMap.Entry的方式，当然对于HashMap，它没有任何关于before/after的操作，对于它来说这是种浪费，**但相比较而言采用这种方式更好**。而且，对于HashMap来说若 key 的hashCode方法实现的够好的化，指的是分布均匀，那么树将很少出现。
+
+
+**LinkedHashMap将具体操作都交给了HashMap，二者直接究竟是如何配合的？**
+
+这涉及到LinkedHashMap如何利用HashMap来实现自己的功能，是这样的，在HashMap的插入删除等操作后会调用**钩子方法**(afterNodeAccess, afterNodeInsertion, afterNodeRemoval)，而这些方法的实现就在LinkedHashMap中，这些方法的目的就是操作 **before 和 after 指针**。LinkedHashMap 重写newNode，newTreeNode 方法，这两个方法是在插入时HashMap构建新节点时调用的，对于重写后的newNode 先是创建LinkedHashMap#Entry节点，之后将其加到 before/after 链的尾部；对于重写后的newTreeNode 先是创建HashMap的TreeNode节点，因为其继承自LinkedHashMap#Entry，所以含有before/after 指针，之后同样加入到链尾。
+
+
+插入新节点后，对于LinkedHashMap来说要进行afterNodeInsertion操作，作用是判断是否要删除head节点，这是一个拓展点，你可以重写removeEldestEntry 方法，执行自己的逻辑，比如数量超过某值后插入新值会删除最久未被操作的值，即头节点。
+```
+void afterNodeInsertion(boolean evict) { // possibly remove eldest
+    LinkedHashMap.Entry<K,V> first;
+    if (evict && (first = head) != null && removeEldestEntry(first)) {
+        K key = first.key;
+        removeNode(hash(key), key, null, false, true);
+    }
+}
+
+protected boolean removeEldestEntry(Map.Entry<K,V> eldest) {
+    return false;
+}
+```
+
+在HashMap的put方法里，调用putVal传的是true，那么决定是否删除head节点的操作就取决于removeEldestEntry方法。
+
+当我们基于 LinkedHashMap 实现**缓存**时，通过覆写removeEldestEntry方法可以实现自定义策略的 LRU 缓存。比如我们可以根据节点数量判断是否移除最近最少被访问的节点，或者根据节点的存活时间判断是否移除该节点等。本节所实现的缓存是基于判断节点数量是否超限的策略。在构造缓存对象时，传入最大节点数。当插入的节点数超过最大节点数时，移除最近最少被访问的节点。实现代码如下：
+```
+public class SimpleCache<K, V> extends LinkedHashMap<K, V> {
+
+    private static final int MAX_NODE_NUM = 100;
+
+    private int limit;
+
+    public SimpleCache() {
+        this(MAX_NODE_NUM);
+    }
+
+    public SimpleCache(int limit) {
+        super(limit, 0.75f, true);
+        this.limit = limit;
+    }
+
+    public V save(K key, V val) {
+        return put(key, val);
+    }
+
+    public V getOne(K key) {
+        return get(key);
+    }
+
+    public boolean exists(K key) {
+        return containsKey(key);
+    }
+
+    /**
+     * 判断节点数是否超限
+     * @param eldest
+     * @return 超限返回 true，否则返回 false
+     */
+    @Override
+    protected boolean removeEldestEntry(Map.Entry<K, V> eldest) {
+        return size() > limit;
+    }
+}
+```
