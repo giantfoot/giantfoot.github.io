@@ -31,4 +31,37 @@ hdfs oev -p XML -i fsimage_0000000 -o fsiamge.xml
 
 NameNode如何确定下次开机启动的时候合并哪些Edits？
 
-查看seen_teid文件，以前合并过的就不再合并
+查看seen_teid文件，以前合并过的就不再合并.
+
+SecondaryNameNode更新检查点checkpoint
+
+1. 默认一个小时【hdfs-default.xml】
+```
+<property>
+  <name>dfs.namenode.checkpoint.period</name>
+  <value>3600</value>
+  <description>The number of seconds between two periodic checkpoints.
+  </description>
+</property>
+```
+2. 一分钟检查一次操作次数，等达到1百万时，也会执行一次
+```
+<property>
+  <name>dfs.namenode.checkpoint.txns</name>
+  <value>1000000</value>
+  <description>The Secondary NameNode or CheckpointNode will create a checkpoint
+  of the namespace every 'dfs.namenode.checkpoint.txns' transactions, regardless
+  of whether 'dfs.namenode.checkpoint.period' has expired.
+  操作动作的次数
+  </description>
+</property>
+<property>
+  <name>dfs.namenode.checkpoint.check.period</name>
+  <value>60</value>
+  <description>The SecondaryNameNode and CheckpointNode will poll the NameNode
+  every 'dfs.namenode.checkpoint.check.period' seconds to query the number
+  of uncheckpointed transactions.
+  一分钟检查一次操作次数
+  </description>
+</property>
+```
