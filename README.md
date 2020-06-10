@@ -40,13 +40,13 @@
 - [*JAVA fail-fast*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/collection/fail-fast.md)
 - [*JAVA Enumeration*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/collection/Enumeration.md)
 - [*JAVA HashMap 图文详解*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/collection/hashmap.md)
-- [*TreeMap*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/collection/TreeMap.md)
+- [*JAVA TreeMap*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/collection/TreeMap.md)
 - [*JAVA HashTable*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/collection/hashtable.md)
 - [*JAVA WeakedHashMap*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/collection/WeakHashMap.md)
 - [*JAVA LinkedHashMap详解*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/collection/LinkedHashMap.md)
-- [*HashSet*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/collection/HashSet.md)
-- [*LinkedHashSet*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/collection/LinkedHashSet.md)
-- [*TreeSet*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/collection/TreeSet.md)
+- [*JAVA HashSet*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/collection/HashSet.md)
+- [*JAVA LinkedHashSet*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/collection/LinkedHashSet.md)
+- [*JAVA TreeSet*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/collection/TreeSet.md)
 
 > **Java 查漏补缺**
 
