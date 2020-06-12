@@ -50,7 +50,8 @@
 
 > **Java 并发**
 
-
+- [*JAVA 线程概述*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/concurrent/线程概述.md)
+- [*JAVA synchronized 底层原理详解*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/concurrent/synchronized.md)
 
 > **Java 查漏补缺**
 
