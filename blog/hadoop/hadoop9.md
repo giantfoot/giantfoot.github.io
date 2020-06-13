@@ -5,3 +5,5 @@
 Configuration conf = new Configuration();
 conf.set("dfs.replication", 3);
 ```
+
+根据api编程比较简单，暂不详细记录。
