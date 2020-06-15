@@ -2,7 +2,7 @@
 
 ElasticSearch https://www.elastic.co/cn/downloads/elasticsearch
 
-IK https://github.com/medcl/elasticsearch-analysis-ik
+IK https://github.com/medcl/elasticsearch-analysis-ik/releases
 
 kibana https://www.elastic.co/cn/downloads/kibana
 
