@@ -55,6 +55,13 @@
 - [*JAVA CAS 详解*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/concurrent/cas详解.md)
 - [*JAVA 内存模型(JMM)及volatile关键字*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/concurrent/Java内存模型(JMM)及volatile关键字.md)
 
+> **Elasticsearch**
+
+- [*Elasticsearch 概述*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/elasticsearch/es1.md)
+- [*Elasticsearch 安装使用*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/elasticsearch/es2.md)
+- [*Elasticsearch 倒排索引*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/elasticsearch/es3.md)
+- [*Elasticsearch IK分词器*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/elasticsearch/es4.md)
+
 > **Java 查漏补缺**
 
 - [*JAVA 概述*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/java_core/core1.md)
@@ -147,7 +154,7 @@
 
 ### 设计模式
 
-### Elasticsearch
+
 
 > **杂记**
 
