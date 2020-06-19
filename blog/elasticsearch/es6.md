@@ -45,5 +45,34 @@ class EsStudyApiApplicationTests {
 
 	}
 
+//搜索，重点
+  @Test
+	void searchTest() throws IOException {
+		SearchRequest request = new SearchRequest();
+
+		SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder();
+
+		TermQueryBuilder termQueryBuilder = QueryBuilders.termQuery("name", "张");
+
+		searchSourceBuilder.query(termQueryBuilder);
+		searchSourceBuilder.timeout(TimeValue.MINUS_ONE);
+		request.source(searchSourceBuilder);
+
+		SearchResponse search = restHighLevelClient.search(request, RequestOptions.DEFAULT);
+	}
+
 }
+
+//插入文档
+	@Test
+	void insertTest() throws IOException {
+		JSONObject save = new JSONObject().fluentPut("name", "test");
+
+		IndexRequest request = new IndexRequest("test");
+		request.id(String.valueOf(1));
+		request.timeout(TimeValue.MINUS_ONE);
+		request.source(save, XContentType.JSON);
+
+		IndexResponse indexResponse = restHighLevelClient.index(request, RequestOptions.DEFAULT);
+	}
 ```
