@@ -54,8 +54,8 @@
 - [*JAVA synchronized 底层原理详解*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/concurrent/synchronized.md)
 - [*JAVA CAS 详解*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/concurrent/cas详解.md)
 - [*JAVA 内存模型(JMM)及volatile关键字*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/concurrent/Java内存模型(JMM)及volatile关键字.md)
-- [*JAVA AQS与ReetrantLock详解*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/concurrent/AQS.md)
-- [*JAVA AQS与Semaphore详解*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/concurrent/AQS2.md)
+- [*JAVA AQS与 ReetrantLock详解*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/concurrent/AQS.md)
+- [*JAVA AQS与 Semaphore详解*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/concurrent/AQS2.md)
 
 > **Elasticsearch**
 
@@ -65,7 +65,7 @@
 - [*Elasticsearch IK分词器*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/elasticsearch/es4.md)
 - [*Elasticsearch 基本命令使用*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/elasticsearch/es5.md)
 - [*Elasticsearch SpringBoot集成ES*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/elasticsearch/es6.md)
-- [*Elasticsearch IK分词器*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/elasticsearch/es4.md)
+- [*Elasticsearch 高级使用，待更新*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/elasticsearch/es7.md)
 
 > **Java 查漏补缺**
 
