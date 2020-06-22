@@ -56,7 +56,8 @@
 - [*JAVA 内存模型(JMM)及volatile关键字*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/concurrent/Java内存模型(JMM)及volatile关键字.md)
 - [*JAVA AQS与 ReetrantLock详解*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/concurrent/AQS.md)
 - [*JAVA AQS与 Semaphore详解*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/concurrent/AQS2.md)
-- [*JAVA LinkedBlockingQueue与ArrayBlockingQueue详解*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/concurrent/LinkedBlockingQueue与ArrayBlockingQueue.md)
+- [*JAVA ArrayBlockingQueue详解*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/concurrent/ArrayBlockingQueue.md)
+- [*JAVA LinkedBlockingQueue详解*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/concurrent/LinkedBlockingQueue.md)
 
 > **Docker**
 
