@@ -58,6 +58,10 @@
 - [*JAVA AQS与 Semaphore详解*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/concurrent/AQS2.md)
 - [*JAVA ArrayBlockingQueue详解*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/concurrent/ArrayBlockingQueue.md)
 - [*JAVA LinkedBlockingQueue详解*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/concurrent/LinkedBlockingQueue.md)
+- [*JAVA 双检锁*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/concurrent/双检锁.md)
+- [*JAVA ReentrantReadWriteLock*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/concurrent/ReentrantReadWriteLock.md)
+- [*JAVA CountDownLatch*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/concurrent/CountDownLatch.md)
+- [*JAVA CyclicBarrier*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/concurrent/CyclicBarrier.md)
 
 > **Docker**
 
@@ -65,6 +69,7 @@
 - [*Docker 安装使用*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/docker/docker2.md)
 - [*Docker 镜像命令解析*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/docker/docker3.md)
 - [*Docker 容器命令解析*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/docker/docker4.md)
+- [*Docker 常用命令*](https://github.com/giantfoot/giantfoot.github.io/blob/master/blog/docker/常用命令.md)
 
 > **Elasticsearch**
 
