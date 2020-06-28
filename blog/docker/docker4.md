@@ -25,6 +25,10 @@ docker ps -a    #查看曾经运行过的容器
 docker ps -n=2  #查看曾经运行过的n个容器
 docker ps -q    #查看曾经运行过的容器编号
 
+很重要的要说明的一点: Docker容器后台运行,就必须有一个前台进程.
+容器运行的命令如果不是那些一直挂起的命令（比如运行top，tail），就是会自动退出的
+docker容器的主线程（dockfile中CMD执行的命令）结束，容器会退出
+
 Crtl + p + q    #退出容器，但不停止，如果再想进入，执行下面命令
 
 docker attach 容器ID
