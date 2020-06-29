@@ -2,7 +2,7 @@
 
 后台启动容器
 ```
-[root@hadoop100 ~]# docker run -d centos
+[root@hadoop100 ~]# docker run -d centos（镜像名:tag，如果不写tag，默认最新；或者直接写镜像id，docker images查询）
 0eec738f77c63b33ac0147681dd160b559853630fe4208af4216bf95eb12dc34
 [root@hadoop100 ~]# docker ps
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES

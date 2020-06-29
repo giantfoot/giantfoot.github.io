@@ -1,4 +1,4 @@
-#### 容器数据卷
+容器数据卷
 
 容器里面一般只有应用和环境，如果把数据也放到容器，容器一旦删除，数据也就没了。
 现在想要数据持久化。
@@ -49,10 +49,24 @@ docker run -d -P --name nginx02 -v test-nginx:/etc/nginx:rw nginx
 Dockerfile 就是用来构建docker镜像的文件，脚本命令，类似之前的docker commit,脚本里面的命令就是一层一层的组建我们的自定义镜像
 
 ```
-# 创建一个脚本文件，名称随机，一般以dockerfile开始
+# 创建一个脚本文件，名称随机，一般以dockerfile开始，比如dockerfile1
 # 文件中格式 ： 指令（大写） 参数
-FROM centos
-VOLUME ["volume01","volume02"]
+
+FROM centos #以centos最新版镜像为基础创建新镜像
+VOLUME ["volume01","volume02"] #挂载的目录（只指定了容器内路径，属于匿名挂载），会出现在容器内的/目录下，映射的是（宿主机）目录var/lib/docker/volumes/xxxx/_data
 CMD echo "--- end ----"
 CMD /bin/bash
+
+然后执行
+docker build -f dockerfile1 -t 镜像名（自定义） .（目录）
+执行完就创建了一个镜像
+docker images查看
+```
+
+**容器间的数据同步 --volumes-from**
+```
+# 只会同步docker01挂载的数据卷里的数据（比如通过dockerfile创建并启动），删除一个容器，其他容器共享卷仍然存在，只见类似相互拷贝备份的关系
+docker run -t --name docker01 centos:7.0
+docker run -t --name docker02 --volumes-from docker01 centos:7.0
+docker run -t --name docker03 --volumes-from docker01 centos:7.0
 ```
