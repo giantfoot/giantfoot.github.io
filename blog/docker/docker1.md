@@ -17,3 +17,7 @@ docker是基于go语言开发。
 容器（container）：独立运行一个或一组应用，通过镜像创建，就像是一个模拟出来的linux系统
 
 仓库（repository）：仓库就是存放镜像的地方，分为共有仓库和私有仓库，默认是Docker hub
+
+![docker](../pic/docker/docker6.jpg)
+
+![docker](../pic/docker/docker7.jpg)
