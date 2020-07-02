@@ -9,3 +9,15 @@
 ![docker](../pic/docker/docker9.png)
 
 Docker 使用的是Linux的桥接，宿主机中是一个Docker容器的网桥docker0
+
+
+如果容器tomcat01想要ping通tomcat02,可以使用--link（真实开发已经不推荐，限制很大）
+```
+#启动tomcat02
+docker run -d --name tomcat02 tomcat
+#启动tomcat01
+docker run -d -P --name tomcat01 --link tomcat02 tomcat
+#这样tomcat01就可以直接连通tomcat02，但是单向的，tomcat02无法ping通tomcat01，除非tomcat02启动时也添加--link命令
+docker exec -it tomcat01 ping tomcat02
+#--link命令实质上是把tomcat02的ip映射放到了tomcat01的hosts文件
+```
