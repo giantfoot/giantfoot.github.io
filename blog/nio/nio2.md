@@ -76,3 +76,28 @@ Gathering Writes 是指数据从多个buffer写入到同一个channel。能较�
 我们要实现一个复制文件的 API，现在有两种方式。第一种采用传统的 IO 流加装饰缓存数组来实现，第二种采用 NIO 流中 FileChannel 的 transferTo 函数来实现通道对通道的传输。用函数运行时间进行测试发现，小文件（不超过十几M时）拷贝时，用流更快，大文件用通道更快。
 
 因为通道的 transferTo 不经过用户态，直接在内核态传输数据，减少上下文切换和额外IO操作，不仅仅在文件拷贝时可以这么用，在读取磁盘文件然后进行 Socket 发送时也可以如此。使用流读写时，进行了多次上下文切换，比如应用读取数据时，首先在内核态将数据从磁盘读取到内核缓存，再切换到用户态将数据从内核缓存读取到用户缓存。
+
+```
+public static void copyFileByStream(File source, File dest) throws FileNotFoundException, IOException {
+    try (InputStream is = new FileInputStream(source);
+    OutputStream os = new FileOutputStream(dest);) {
+        byte[] buffer = new byte[1024];
+        int len;
+        while ((len = is.read(buffer)) != -1) {
+            os.write(buffer, 0, len);
+        }
+        os.flush();
+    }
+}
+
+@SuppressWarnings("resource")
+public static void copyFileByChannel(File source, File dest) throws FileNotFoundException, IOException {
+    try (FileChannel srcChannel = new FileInputStream(source).getChannel();
+            FileChannel destChannel = new FileOutputStream(dest).getChannel();) {
+        for (long len = srcChannel.size(); len > 0;) {
+            long l = srcChannel.transferTo(srcChannel.position(), len, destChannel);
+            len -= l;
+        }
+    }
+}
+```
