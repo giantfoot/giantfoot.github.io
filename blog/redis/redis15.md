@@ -114,8 +114,49 @@ RedisTemplate
             .......
         }
 ```
+
+**如果保存的值是个对象，却没有实现序列化就会直接报错（默认没有自定义配置的情况下）**
+```
+        User user = new User();
+        //Jackson进行序列化，set不会报错
+        String value = new ObjectMapper().writeValueAsString(user);
+        redisTemplate.opsForValue().set("user", value);
+
+        User user = new User();
+        //没有序列化，set会报错，如果实现Serializable就不会报错
+        redisTemplate.opsForValue().set("user", user);
+```
 自定义配置类RedisConfig，直接参考RedisAutoConfiguration 默认配置类
 ```
+@Configuration
+public class RedisConfig {
+
+    @Bean
+    @SuppressWarnings("all")
+    public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory redisConnectionFactory) {
+        RedisTemplate<String, Object> template = new RedisTemplate();
+        template.setConnectionFactory(redisConnectionFactory);
+        //设置Jackson序列化配置，主要用来序列化对象
+        Jackson2JsonRedisSerializer jackson2JsonRedisSerializer = new Jackson2JsonRedisSerializer(Object.class);
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.ANY);
+        objectMapper.activateDefaultTyping(LaissezFaireSubTypeValidator.instance);
+        jackson2JsonRedisSerializer.setObjectMapper(objectMapper);
+        //String序列化配置，主要用来设置key
+        StringRedisSerializer stringRedisSerializer = new StringRedisSerializer();
+
+        //key使用String序列器
+        template.setKeySerializer(stringRedisSerializer);
+        //hash的key使用String序列器
+        template.setHashKeySerializer(stringRedisSerializer);
+        //value使用Json序列器
+        template.setValueSerializer(jackson2JsonRedisSerializer);
+        template.setHashValueSerializer(jackson2JsonRedisSerializer);
+        template.afterPropertiesSet();
+
+        return template;
+    }
+}
 
 
 ```
