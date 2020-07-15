@@ -34,9 +34,10 @@ rdbchecksum yes 保存rdb文件的时候，进行错误检查
 dir ./ rdb文件保存目录
 
 
-requirepass 123456  #配置设置密码
+requirepass 123456  #配置文件设置密码
 
-config set requirepass  # 123456 #命令设置密码
+config set requirepass 123456  # 123456 #命令设置密码
+config set requirepass "" #去除密码
 
 auth 123456 # 输入密码进入
 
